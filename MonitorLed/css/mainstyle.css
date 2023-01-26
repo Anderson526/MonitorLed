@@ -1,0 +1,493 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #262626;
+}
+
+li{
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+/*Navbar styles*/
+
+
+header{
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    padding: 0 24px;    
+    z-index: 100;
+  
+   
+}
+
+
+
+
+.nav-menu{
+    display: flex;
+    align-items: flex-end;
+    gap: 60px;
+   
+   
+}
+
+.nav-branding{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.nav-branding:hover{
+    color: #4a6ac2;
+    transition: 0.3s ease-in-out;
+}
+
+
+.nav-link{
+    color: #fff;
+    transition: 0.3s ease;
+
+}
+
+
+.nav-link:hover{
+    color: #4a6ac2;
+}
+
+.nav-item{
+    padding-top: 20px;
+    font-size: 1rem;
+  
+}
+
+/*Hamburger button styles*/
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+
+}
+
+.branding-text{
+    display: none;
+}
+
+
+/*Icon style nav-bar*/
+
+.icon{
+    width: 20px;
+    filter: contrast(0);
+   
+}
+
+.icon-footer{
+    
+    width: 20px;
+    filter: contrast(0);
+    
+   
+}
+
+
+
+
+
+
+
+
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    bottom: 0;
+    background-color: #262626;
+}
+
+
+.container-footer{
+    min-height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: 0 24px;   
+    color: #fff;
+}
+
+.container-footer h2{
+    display: flex;
+   margin-right: 40px;
+    font-weight: 400;
+   
+}
+
+
+
+.contact-information{
+    display: flex;
+    margin-left: 40px;
+   
+
+
+}
+
+.contact-information-list{
+    display: block;
+    margin: auto 0;
+    z-index: 100;
+
+
+}
+
+.contact-information-list a:hover{
+    color: #4a6ac2;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+
+/*main*/
+
+.main{
+    margin-top: 70px;
+    background-color: #303030;
+}
+
+
+.container-main{
+    display: block;
+    margin: 0 20%;
+    background-color: #262626;
+    color: #fff;
+    overflow-x: hidden;
+    z-index: 10;
+}
+
+.title{
+   font-size: 30px;
+    text-align: center;
+    margin: 3em 0;
+}
+
+.title2{
+    font-size: 30px;
+     text-align: center;
+     margin: 3em 0;
+ }
+
+.quienes-somos{
+    text-align: justify;
+    margin: 3em 4em;
+    font-size: 1.6em;
+}
+
+
+
+.img-quienes-somos{
+ margin-left:5% ;
+    width: 90%;
+
+}
+
+.contactenos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    margin: 2em ;
+    text-align: center;
+}
+
+
+
+
+
+
+.icon-contact{
+    
+    width: 40px;
+    filter: contrast(0);
+    margin-left: 25%;
+    
+   
+}
+
+
+/* carousel*/
+
+.carrousel{
+    width: 100%;
+    max-width: 120em;
+    
+
+}
+
+.carrousel .grande{
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    transition: all .5s ease;
+
+
+    
+
+}
+
+.carrousel .img{
+    width: 25%;
+  
+}
+
+.carrousel .puntos{
+    width: 100%;
+    background-color: bisque;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+ 
+}
+
+.carrousel .punto{
+    width: 2em;
+    height: 2em;
+    margin-left: 15px;
+ 
+ 
+
+}
+
+.carrousel .punto.active{
+    background-color: aquamarine;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* movile */
+
+@media (max-width: 768px) {
+
+
+    /*navBar and Hamburguer button function*/
+
+
+    .hamburger{
+        display: block;
+    }
+
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px)   rotate(-45deg);
+       
+    }
+    
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px)  rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    .nav-menu{
+        border-radius: 5px;
+        position: fixed;
+        bottom: 100%;
+        right: 0;  
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 45%;
+        height: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    
+    .nav-item{
+        margin: 20px 30px 20px 0;
+    }
+    
+    .nav-menu.active{
+        bottom:-23px;
+       
+    }
+
+
+    .branding-text{
+        display: none;
+    }
+
+    .title{
+
+        text-align: center;
+        margin: 3em 0;
+    }
+    
+    .quienes-somos{
+        font-size: .5em;
+        margin: 3em 2em;
+        font-size: 1.6em;
+    }
+    
+
+  }
+
+/*small movile*/
+
+@media (max-width: 768px) {
+
+    .container-main{
+        display: block;
+        margin: 0 2%;
+        background-color: #262626;
+        color: #fff;
+        overflow-x: hidden;
+        z-index: 10;
+    }
+    .quienes-somos{
+        font-size: .3em;
+        margin: 3em 1em;
+        font-size: 1.6em;
+    }
+
+
+}
+
+  @media (max-width: 442px) {
+
+    /*nav menu adjustment */
+    .nav-menu{
+        border-radius: 5px;
+        position: fixed;
+        bottom: 100%;
+        right: 0;  
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .branding-text{
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    /*Footer*/
+
+    .container-footer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+   
+    }
+
+
+
+    /*main*/
+    .container-main{
+        display: block;
+        margin: 0 2%;
+        background-color: #262626;
+        color: #fff;
+      
+    }
+
+
+    .title{
+
+        text-align: center;
+        margin: 3em 0;
+    }
+    
+    .quienes-somos{
+        font-size: .3em;
+        margin: 3em 1em;
+        font-size: 1.6em;
+    }
+    
+
+
+  }
+
+  @media (max-width: 350px) {
+
+    .container-footer h2{
+     display: none;
+       
+    }
+
+
+
+
+      /*main*/
+      .container-main{
+        display: block;
+        margin: 0 2%;
+        background-color: #262626;
+        color: #fff;
+    }
+
+    .title{
+
+        text-align: center;
+        margin: 3em 0;
+    }
+    
+    .quienes-somos p{
+        margin: 3em 1em;
+        font-size: 1em;
+     
+      
+    }
+    
+
+
+  }
